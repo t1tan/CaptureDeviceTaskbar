@@ -10,6 +10,7 @@ public:
     virtual wxMenu* CreatePopupMenu() wxOVERRIDE;
     
     void OnLeftButtonDClick(wxTaskBarIconEvent&);
+    void OnMenuAutoRun(wxCommandEvent&);
     void OnMenuExit(wxCommandEvent&);
     void OnMenuDevice(wxCommandEvent&);
 
@@ -23,4 +24,6 @@ private:
     void ShowDevicePropertiesDialog();
     void ReadDefaultDevice();
     void WriteDefaultDevice();
+    bool IsAutoRun();
+    void SetAutoRun(bool autoRun);
 };
